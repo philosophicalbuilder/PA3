@@ -9,8 +9,8 @@ public class PA3 {
         int test_cases = stdin.nextInt();
 
         for (int t = 1; t <= test_cases; t++) {
-            int x = stdin.nextInt();
-            int y = stdin.nextInt();
+            long x = stdin.nextLong();
+            long y = stdin.nextLong();
         }
     }
 
