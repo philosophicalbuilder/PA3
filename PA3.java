@@ -24,7 +24,7 @@ public class PA3 {
                 int numHalves = 0;
                 long val = x;
  
-                while (val / 2 > y) {
+                while (val / 2 >= y) {
                     long killed = val - val / 2;
                     if (halveCost <= killed * removeCost) {
                         numHalves++;
