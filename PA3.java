@@ -57,10 +57,15 @@ public class PA3 {
             // it should be (val - y) not just val, we only need to remove down to y
 
         }
-        public int sortByResult(String[] naes, long[]costs, int a, int b) {
 
-            
-        }
+    }
 
+    // Sorting: ttps://www.baeldung.com/java-sort-collection-multiple-fields
+    static int sortByResult(String[] names, long[] costs, int a, int b) {
+        return 0;
+        /*
+         * if costs[a] != b, compare both, return compareTo for both.
+         * 
+         */
     }
 }
