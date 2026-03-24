@@ -33,6 +33,8 @@ public class PA3 {
                         break;
                     }
                 }
+                // total cost = halving costs + cost to remove the rest one by one
+                costs[i] = (long) numHalves * halveCost + val * removeCost;
             }
 
             /*
