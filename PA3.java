@@ -12,6 +12,27 @@ public class PA3 {
             long x = stdin.nextLong();
             long y = stdin.nextLong();
             int z = stdin.nextInt();
+
+            String[] names = new String[z];
+            long[] costs = new long[z];
+
+            for (int i = 0; i < z; i++) {
+                names[i] = stdin.next();
+                long removeCost = stdin.nextLong();
+                long halveCost = stdin.nextLong();
+ 
+                int numHalves = 0;
+                long val = x;
+ 
+                while (val / 2 > y) {
+                    long killed = val - val / 2;
+                    if (halveCost <= killed * removeCost) {
+                        numHalves++;
+                        val = val / 2;
+                    } else {
+                        break;
+                    }
+                }
         }
 
         /*
@@ -24,8 +45,16 @@ public class PA3 {
          * 
          * 
          */
-        String[] names = new String[z];
-        long[] costs = new long[z];
+
+        // for each company:
+        // 1. read in the name, remove cost, and halve cost
+        // 2. start at x zombies
+        // 3. keep halving as long as we stay above y
+        // - if halving is cheaper than removing that many one by one, halve
+        // - otherwise stop halving
+        // 4. cost = (number of halves * halve cost) + (remaining zombies * remove cost)
+        // // is remaining zombies right?
+        // it should be (val - y) not just val, we only need to remove down to y
 
     }
 
