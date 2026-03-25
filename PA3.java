@@ -49,6 +49,11 @@ public class PA3 {
                 return a.compareTo(b);
             });
 
+            System.out.println("Case " + t);
+            for (String name : companies) {
+                System.out.println(name + map.get(name));
+            }
+
             /*
              * 
              * need to store all the names and costs because we can't print thenm right away
