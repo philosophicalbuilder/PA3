@@ -39,13 +39,14 @@ public class PA3 {
 
             }
 
-            ArrayList<String> names = new ArrayList<>();
-            names.sort((a, b) -> {
-                if (a.cost != b.cost) {
-                    return Long.compare(a.cost, b.cost);
-                } else {
-                    return a.name.compareTo(b.name);
+            ArrayList<String> companies = new ArrayList<>(map.keySet());
+            companies.sort((a, b) -> {
+                long costA = map.get(a);
+                long costB = map.get(b);
+                if (costA != costB) {
+                    return Long.compare(costA, costB);
                 }
+                return a.compareTo(b);
             });
 
             /*
