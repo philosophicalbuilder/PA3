@@ -26,14 +26,14 @@ public class PA3 {
 
                 while (val / 2 >= y) {
                     long killed = val - val / 2;
-                    if (halveCost <= killed * removeCost) {
+                    if (halveCost < killed * removeCost) {
                         numHalves++;
                         val = val / 2;
                     } else {
                         break;
                     }
                 }
-                // total cost = halving costs + cost to remove the rest one by one
+
                 long cost = (long) numHalves * halveCost + (val - y) * removeCost;
                 map.put(name, cost);
             }
@@ -49,12 +49,9 @@ public class PA3 {
             });
 
             System.out.println("Case " + t);
-            for (String name : companies) {
-                System.out.println(name + map.get(name));
+            for (String company : companies) {
+                System.out.println(company + " " + map.get(company));
             }
-
         }
-
     }
-
 }
