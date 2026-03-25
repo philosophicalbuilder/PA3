@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -37,6 +38,15 @@ public class PA3 {
                 long cost = (long) numHalves * halveCost + (val - y) * removeCost;
 
             }
+
+            ArrayList<String> names = new ArrayList<>();
+            names.sort((a, b) -> {
+                if (a.cost != b.cost) {
+                    return Long.compare(a.cost, b.cost);
+                } else {
+                    return a.name.compareTo(b.name);
+                }
+            });
 
             /*
              * 
