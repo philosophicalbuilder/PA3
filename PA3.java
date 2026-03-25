@@ -63,11 +63,4 @@ public class PA3 {
 
     }
 
-    // Sorting: ttps://www.baeldung.com/java-sort-collection-multiple-fields
-    static int sortByResult(String[] names, long[] costs, int a, int b) {
-        if (costs[a] != costs[b]) {
-            return Long.compare(costs[a], costs[b]);
-        }
-        return names[a].compareTo(names[b]);
-    }
 }
