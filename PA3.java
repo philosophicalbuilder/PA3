@@ -49,6 +49,7 @@ public class PA3 {
                 return a.compareTo(b);
             });
 
+            // test
             System.out.println("Case " + t);
             for (String name : companies) {
                 System.out.println(name + map.get(name));
