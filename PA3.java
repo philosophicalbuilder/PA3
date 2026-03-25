@@ -1,3 +1,4 @@
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class PA3 {
@@ -13,11 +14,10 @@ public class PA3 {
             long y = stdin.nextLong();
             int z = stdin.nextInt();
 
-            String[] names = new String[z];
-            long[] costs = new long[z];
+            // using Hmap instead
+            HashMap<String, Long> map = new HashMap<>();
 
             for (int i = 0; i < z; i++) {
-                names[i] = stdin.next();
                 long removeCost = stdin.nextLong();
                 long halveCost = stdin.nextLong();
 
@@ -34,7 +34,8 @@ public class PA3 {
                     }
                 }
                 // total cost = halving costs + cost to remove the rest one by one
-                costs[i] = (long) numHalves * halveCost + val * removeCost;
+                long cost = (long) numHalves * halveCost + (val - y) * removeCost;
+
             }
 
             /*
